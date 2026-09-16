@@ -36,7 +36,7 @@ function Experience() {
 
           {experiences.map((exp, index) => (
             <motion.div
-              key={exp.company}
+              key={`${exp.company}-${exp.role}-${index}`}
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
