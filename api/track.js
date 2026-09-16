@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ message: 'Server configuration error' });
   }
 
-  const text = `🚨 New Portfolio Visit!\n\n🌐 URL: ${url}\n📌 Source: ${platform}\n🔗 Referrer: ${referrer || 'Direct Link / Hidden'}`;
+  const text = `🚨 New Portfolio Visit!\n\n📌 Source: ${platform}\n🔗 Referrer: ${referrer || 'Direct Link / Hidden'}`;
 
   try {
     const telegramUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;

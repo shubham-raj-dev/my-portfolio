@@ -1,19 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Terminal, Download } from 'lucide-react'; // Download icon add kiya
-import { stats, RESUME_LINK } from '../data/portfolioData'; // RESUME_LINK import kiya
+import { ArrowRight, Terminal, Download } from 'lucide-react';
+import { stats, RESUME_LINK } from '../data/portfolioData';
 
 function Hero() {
   return (
     <section className="relative flex min-h-screen items-center pt-20 overflow-hidden bg-mesh-pattern">
-      {/* Background glow specific to your colors */}
       <div className="absolute top-1/4 left-0 h-[300px] w-[300px] rounded-full bg-emerald-500/10 blur-[120px]" />
       <div className="absolute bottom-1/4 right-1/4 h-[300px] w-[300px] rounded-full bg-cyan-500/10 blur-[120px]" />
 
       <div className="container relative z-10 mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-12 items-center">
-        
-        {/* Left Column: Text Area */}
-        <div className="flex flex-col items-start text-left">
+        {/* Left Column: Text Area - lg:order-2 on mobile means it comes second */}
+        <div className="lg:order-2 flex flex-col items-start text-left">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -42,14 +40,12 @@ function Hero() {
             A passionate <strong className="text-white">Full Stack Developer</strong> specializing in <strong className="text-white">Python & React</strong>. I build scalable web applications and robust backend systems.
           </motion.p>
 
-          {/* 🔥 DYNAMIC BUTTONS SECTION 🔥 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
           >
-            {/* 💻 DESKTOP & TABLET BUTTONS (sm screens and above par hi dikhenge) */}
             <a 
               href="#projects" 
               className="hidden sm:inline-flex px-8 py-3.5 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all items-center gap-2"
@@ -63,7 +59,6 @@ function Hero() {
               Contact Me
             </a>
 
-            {/* 📱 MOBILE BUTTONS (sirf small screens par dikhenge, with full width layout) */}
             <a 
               href="#contact" 
               className="inline-flex sm:hidden w-full justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold shadow-lg shadow-emerald-500/20 transition-all items-center gap-2"
@@ -80,7 +75,6 @@ function Hero() {
             </a>
           </motion.div>
 
-          {/* Mini Stats under button */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -96,37 +90,29 @@ function Hero() {
           </motion.div>
         </div>
 
-        {/* Right Column: Abstract Glass Feature */}
+        {/* Right Column: Photo - lg:order-1 on mobile means it comes first */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="hidden lg:flex justify-center relative"
+          className="lg:order-1 flex justify-center"
         >
-          {/* Main Floating Glass Card */}
-          <div className="relative w-full max-w-md aspect-square rounded-2xl glass border border-white/10 p-8 flex flex-col justify-between animate-float overflow-hidden">
-             <div className="absolute top-0 left-0 w-full h-8 bg-black/40 flex items-center px-4 gap-2">
-               <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-               <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-               <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-             </div>
-             
-             <div className="mt-8 font-mono text-sm text-emerald-400">
-                <p><span className="text-cyan-400">class</span> Developer:</p>
-                <p className="ml-4"><span className="text-cyan-400">def</span> __init__(self):</p>
-                <p className="ml-8">self.name = <span className="text-yellow-300">"Shubham Raj"</span></p>
-                <p className="ml-8">self.role = <span className="text-yellow-300">"Full Stack"</span></p>
-                <p className="ml-8">self.weapons = [<span className="text-yellow-300">"Python"</span>, <span className="text-yellow-300">"React"</span>, <span className="text-yellow-300">"Django"</span>]</p>
-                <br/>
-                <p className="ml-4"><span className="text-cyan-400">def</span> build(self):</p>
-                <p className="ml-8 text-zinc-400"># Keep coding until it works</p>
-                <p className="ml-8 text-purple-400">return <span className="text-white">Success()</span></p>
-             </div>
-
-             <div className="absolute bottom-[-20%] right-[-10%] w-64 h-64 bg-emerald-500/20 blur-[80px] rounded-full"></div>
+          <div className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-full glass border-emerald-500/30 animate-float overflow-hidden bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 flex items-center justify-center">
+            <img
+              src="/profile.png"
+              alt="Shubham Raj"
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.parentElement.innerHTML = `
+                  <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-emerald-500 to-cyan-500">
+                    <span className="text-6xl lg:text-7xl font-extrabold text-white">SR</span>
+                  </div>
+                `;
+              }}
+            />
           </div>
         </motion.div>
-
       </div>
     </section>
   );
