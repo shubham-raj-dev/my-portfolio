@@ -11,7 +11,7 @@ function Hero() {
 
       <div className="container relative z-10 mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Column: Text Area - lg:order-2 on mobile means it comes second */}
-        <div className="lg:order-2 flex flex-col items-start text-left">
+        <div className="order-2 lg:order-1 flex flex-col items-start text-left">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -95,7 +95,7 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="lg:order-1 flex justify-center"
+          className="order-1 lg:order-2 flex justify-center"
         >
           <div className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-full glass border-emerald-500/30 animate-float overflow-hidden bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 flex items-center justify-center">
             <img
