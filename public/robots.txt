@@ -1,0 +1,6 @@
+# robots.txt — Shubham Raj portfolio
+User-agent: *
+Allow: /
+
+# ⚠️ ACTION REQUIRED: replace with your deployed domain
+Sitemap: https://REPLACE-WITH-YOUR-DOMAIN/sitemap.xml

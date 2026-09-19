@@ -17,7 +17,9 @@ export const LinkedinIcon = (props) => (
   </svg>
 );
 
-export const RESUME_LINK = "https://drive.google.com/file/d/1KBQBv__OYS5FdxK1MMU_xSYHw9YtLQz6/view?usp=sharing";
+// Resume now lives inside the public/ folder (public/resume.pdf) so it loads from our own domain.
+// NOTE: keep the file name exactly "resume.pdf" in the public folder.
+export const RESUME_LINK = "/resume.pdf";
 
 export const navLinks = [
   { name: "About", href: "#about" },
