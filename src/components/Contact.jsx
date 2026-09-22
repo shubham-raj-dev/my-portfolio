@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, MapPin, ArrowUpRight, Phone } from 'lucide-react'; // Phone icon added
-import { socialLinks } from '../data/portfolioData';
+import { Send, Mail, MapPin, Download } from 'lucide-react';
+import { socialLinks, RESUME_LINK } from '../data/portfolioData';
 
 function Contact() {
   return (
@@ -43,17 +43,11 @@ function Contact() {
               I'm currently open for new opportunities, internships, and collaborations. Whether you have a question or just want to say hi, my inbox is always open!
             </p>
 
-            {/* Added Phone Button Here */}
+            {/* Contact details and Resume Button */}
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 mb-8">
                <a href="mailto:shubhamsingh161203@gmail.com" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-all hover:border-emerald-500/30 hover:bg-white/[0.05]">
                   <Mail className="h-5 w-5 text-emerald-400" />
                   <span className="text-sm font-semibold text-white">shubhamsingh161203@gmail.com</span>
-               </a>
-               
-               {/* Naya Clickable Phone Button */}
-               <a href="tel:+918409858830" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-all hover:border-cyan-500/30 hover:bg-white/[0.05]">
-                  <Phone className="h-5 w-5 text-cyan-400" />
-                  <span className="text-sm font-semibold text-white">+91 84098 58830</span>
                </a>
                
                <div className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-4">
@@ -74,12 +68,22 @@ function Contact() {
                })}
             </div>
 
-            <a
-              href="mailto:shubhamsingh161203@gmail.com"
-              className="inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400 px-8 text-base font-semibold text-white shadow-lg shadow-emerald-500/25 transition-all bg-[length:200%] hover:bg-[length:100%] hover:shadow-xl hover:shadow-emerald-500/40"
-            >
-              Say Hello <ArrowUpRight className="h-5 w-5" />
-            </a>
+            <div className="flex justify-center gap-4 flex-col sm:flex-row">
+              <a
+                href={RESUME_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-white/10 px-8 text-base font-semibold text-white transition-all hover:bg-white/20 border border-white/10"
+              >
+                <Download className="h-5 w-5" /> Download Resume
+              </a>
+              <a
+                href="mailto:shubhamsingh161203@gmail.com"
+                className="inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400 px-8 text-base font-semibold text-white shadow-lg shadow-emerald-500/25 transition-all bg-[length:200%] hover:bg-[length:100%] hover:shadow-xl hover:shadow-emerald-500/40"
+              >
+                Say Hello <Send className="h-5 w-5 ml-2" />
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>

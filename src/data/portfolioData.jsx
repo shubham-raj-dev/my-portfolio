@@ -17,16 +17,15 @@ export const LinkedinIcon = (props) => (
   </svg>
 );
 
-// Resume now lives inside the public/ folder (public/resume.pdf) so it loads from our own domain.
-// NOTE: keep the file name exactly "resume.pdf" in the public folder.
-export const RESUME_LINK = "/resume.pdf";
+export const RESUME_LINK = "/Shubham_Resume.pdf";
 
 export const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Contact", href: "#contact" },
+  { name: "About", href: "/#about" },
+  { name: "Experience", href: "/#experience" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Skills", href: "/#skills" },
+  { name: "FAQ", href: "/#faq" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export const socialLinks = [
@@ -47,6 +46,7 @@ export const experiences = [
     location: "Remote (AICTE Approved)",
     color: "from-violet-500 to-fuchsia-500",
     logo: "E",
+    certificateLink: "https://drive.google.com/file/d/1UzKcFc8ebLMmbNqvPIlf0YjX8kX-SiUJ/view?usp=sharing",
     highlights: [
       "Completed a rigorous 6-week track focusing deeply on Artificial Intelligence via the IBM SkillsBuild platform.",
       "Developed a standalone AI project under mentor guidance, mastering foundational and advanced AI concepts.",
@@ -59,6 +59,7 @@ export const experiences = [
     location: "Remote (AICTE Approved)",
     color: "from-fuchsia-500 to-pink-500",
     logo: "E",
+    certificateLink: "https://drive.google.com/file/d/1g2wM1ldZrWyDJpQ5VZg00c-DEVuSsbGb/view?usp=sharing",
     highlights: [
       "Accelerated 4-week dual-track internship focusing on Artificial Intelligence and IBM Cloud Platform integration.",
       "Solved real-world challenges by deploying emerging technologies on enterprise cloud infrastructure.",
@@ -84,6 +85,7 @@ export const experiences = [
     location: "Remote (AICTE Approved)",
     color: "from-cyan-400 to-blue-500",
     logo: "C",
+    certificateLink: "https://drive.google.com/file/d/1hBki3D0FxefD4PKMdLY0Yv1T2mG5jRc0/view?usp=sharing",
     highlights: [
       "Completed intensive hands-on training in network security, threat detection, and mitigation strategies.",
       "Analyzed system vulnerabilities and implemented robust cybersecurity frameworks for future-ready digital skillsets.",
@@ -96,7 +98,7 @@ export const experiences = [
     location: "Remote",
     color: "from-emerald-400 to-teal-500",
     logo: "Y",
-    link: "https://drive.google.com/file/d/1ChF3Q0FmhhTlzvjGMcmA2P_V_rCZPgxx/view?usp=sharing",
+    certificateLink: "https://drive.google.com/file/d/1DBox7OO54My6L7zZx1d-L76R3WWwAdIu/view?usp=sharing",
     highlights: [
       "Mastered the MERN stack through a comprehensive 4-month program, building and delivering real-world full-stack web applications.",
       "Achieved key milestones: theoretical course completion, hands-on professional internship, and independent project execution.",
@@ -109,13 +111,13 @@ export const skillCategories = [
     title: "Languages",
     icon: Code2,
     color: "from-blue-400 to-cyan-400",
-    skills: ["Python", "JavaScript", "HTML/CSS"],
+    skills: ["Python", "JavaScript", "HTML/CSS", "SQL"],
   },
   {
     title: "Frontend",
     icon: Layout,
     color: "from-emerald-400 to-teal-400",
-    skills: ["React.js", "Tailwind CSS"],
+    skills: ["React.js", "Tailwind CSS", "Bootstrap"],
   },
   {
     title: "Backend & Database",
@@ -124,10 +126,10 @@ export const skillCategories = [
     skills: ["Django REST", "Node.js", "PostgreSQL", "MongoDB"],
   },
   {
-    title: "DevOps & Tools",
+    title: "Tools & Others",
     icon: Wrench,
     color: "from-pink-400 to-rose-400",
-    skills: ["Git/GitHub"],
+    skills: ["Git/GitHub", "Vercel", "Postman", "WebSockets"],
   }
 ];
 
@@ -209,5 +211,20 @@ export const projects = [
         infrastructure: "GitHub Pages"
       }
     }
+  }
+];
+
+export const faqs = [
+  {
+    question: "What is your primary tech stack?",
+    answer: "I specialize in the MERN stack (MongoDB, Express, React, Node.js) and Python/Django REST framework for backend services. I heavily use Tailwind CSS for styling."
+  },
+  {
+    question: "Are you open to freelance or internship opportunities?",
+    answer: "Yes, I am actively looking for internship opportunities and am open to freelance projects where I can contribute my full-stack skills."
+  },
+  {
+    question: "How do you handle backend databases?",
+    answer: "I am proficient in both SQL (PostgreSQL) and NoSQL (MongoDB). I choose the database based on the specific requirements and relational complexity of the project."
   }
 ];

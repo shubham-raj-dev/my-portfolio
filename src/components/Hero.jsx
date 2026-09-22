@@ -10,7 +10,7 @@ function Hero() {
       <div className="absolute bottom-1/4 right-1/4 h-[300px] w-[300px] rounded-full bg-cyan-500/10 blur-[120px]" />
 
       <div className="container relative z-10 mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-12 items-center">
-        {/* Left Column: Text Area - lg:order-2 on mobile means it comes second */}
+        {/* Left Column: Text Area */}
         <div className="order-2 lg:order-1 flex flex-col items-start text-left">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -90,27 +90,29 @@ function Hero() {
           </motion.div>
         </div>
 
-        {/* Right Column: Photo - lg:order-1 on mobile means it comes first */}
+        {/* Right Column: Photo Enhanced */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="order-1 lg:order-2 flex justify-center"
         >
-          <div className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-full glass border-emerald-500/30 animate-float overflow-hidden bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 flex items-center justify-center">
-            <img
-              src="/profile.png"
-              alt="Shubham Raj"
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.parentElement.innerHTML = `
-                  <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-emerald-500 to-cyan-500">
-                    <span className="text-6xl lg:text-7xl font-extrabold text-white">SR</span>
-                  </div>
-                `;
-              }}
-            />
+          <div className="relative group w-72 h-72 lg:w-96 lg:h-96 rounded-full glass border-2 border-emerald-500/50 hover:border-emerald-400 animate-float overflow-hidden bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 shadow-2xl shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all duration-500 flex items-center justify-center p-2">
+            <div className="w-full h-full rounded-full overflow-hidden border border-white/10">
+              <img
+                src="/profile.png"
+                alt="Shubham Raj"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.parentElement.innerHTML = `
+                    <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-emerald-500 to-cyan-500">
+                      <span className="text-6xl lg:text-8xl font-extrabold text-white">SR</span>
+                    </div>
+                  `;
+                }}
+              />
+            </div>
           </div>
         </motion.div>
       </div>

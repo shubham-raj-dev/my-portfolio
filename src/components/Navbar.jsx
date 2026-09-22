@@ -16,7 +16,7 @@ function Navbar() {
   // Scroll Spy Logic
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navLinks.map(link => link.href.substring(1));
+      const sections = navLinks.map(link => link.href.split('#')[1]).filter(Boolean);
       const scrollPosition = window.scrollY + window.innerHeight / 3;
 
       for (const section of sections) {
@@ -56,7 +56,7 @@ function Navbar() {
         <div className="hidden md:flex items-center gap-6">
           <nav className="flex items-center gap-1 p-1.5 rounded-full border border-white/5 bg-white/[0.02] backdrop-blur-md">
             {navLinks.map((link) => {
-              const sectionId = link.href.substring(1);
+              const sectionId = link.href.split('#')[1];
               const isActive = activeSection === sectionId;
               
               return (
@@ -106,7 +106,7 @@ function Navbar() {
             style={{ backgroundColor: '#050914' }} // Pure solid background to block any scroll overlap
           >
              {navLinks.map((link) => {
-               const sectionId = link.href.substring(1);
+               const sectionId = link.href.split('#')[1];
                const isActive = activeSection === sectionId;
                
                return (

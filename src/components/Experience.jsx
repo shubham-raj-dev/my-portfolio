@@ -77,17 +77,17 @@ function Experience() {
                     ))}
                   </ul>
 
-                  {/* Ye raha naya "View Credentials" Button */}
-                  {exp.link && (
+                  {/* Certificate Link Button */}
+                  {(exp.certificateLink || exp.link) && (
                     <div className="mt-5 pt-4 border-t border-white/5">
                       <a 
-                        href={exp.link} 
+                        href={exp.certificateLink || exp.link} 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <Award className="h-4 w-4" /> 
-                        View Credentials 
+                        View Certificate 
                         <ArrowUpRight className="h-3 w-3" />
                       </a>
                     </div>

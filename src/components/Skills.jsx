@@ -3,24 +3,6 @@ import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import { skillCategories } from '../data/portfolioData';
 
-// Official Logos fetch karne ke liye helper function
-const getLogo = (skillName) => {
-  const logos = {
-    "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-    "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-    "HTML/CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
-    "React.js": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    "Tailwind CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-    "Django REST": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
-    "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-    "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-    "MongoDB": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
-    "Git/GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
-  };
-  // Agar koi logo match nahi hota, toh default icon dikhayega
-  return logos[skillName] || "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devicon/devicon-original.svg";
-};
-
 function Skills() {
   return (
     <section id="skills" className="section-padding relative overflow-hidden py-24">
@@ -59,34 +41,24 @@ function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group liquid-glass rounded-xl p-6 transition-all duration-500 hover:border-emerald-500/20 hover:shadow-emerald-500/10"
+                className="group liquid-glass rounded-xl p-8 transition-all duration-500 hover:border-emerald-500/20 hover:shadow-emerald-500/10"
               >
                 <div className="mb-6 flex items-center gap-3 border-b border-white/5 pb-4">
                   <div className={`flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br ${category.color} shadow-lg`}>
                     <Icon className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-white">{category.title}</h3>
+                  <h3 className="text-xl font-bold text-white">{category.title}</h3>
                 </div>
                 
-                {/* Yahan humne text pills ki jagah Logo Cards lagaye hain */}
-                <div className="grid grid-cols-3 gap-3">
+                {/* Simplified text-based skills display */}
+                <div className="flex flex-wrap gap-2.5">
                   {category.skills.map((skill) => (
-                    <div 
+                    <span 
                       key={skill} 
-                      className="flex flex-col items-center justify-center gap-3 p-4 rounded-xl border border-white/5 bg-white/[0.01] transition-all duration-300 hover:bg-white/[0.05] hover:border-white/10 hover:-translate-y-1"
+                      className="px-4 py-2 rounded-lg border border-white/10 bg-white/[0.03] text-sm font-medium text-zinc-300 transition-all hover:bg-white/[0.08] hover:text-white"
                     >
-                      {/* Logo image box (White background padding taaki dark logos bhi saaf dikhein) */}
-                      <div className="h-12 w-12 flex items-center justify-center rounded-lg bg-white/10 p-2 shadow-inner">
-                        <img 
-                          src={getLogo(skill)} 
-                          alt={skill} 
-                          className="w-full h-full object-contain" 
-                        />
-                      </div>
-                      <span className="text-xs font-semibold text-zinc-300 text-center leading-tight">
-                        {skill}
-                      </span>
-                    </div>
+                      {skill}
+                    </span>
                   ))}
                 </div>
 

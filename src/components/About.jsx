@@ -24,30 +24,22 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl"
+            className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-white"
           >
             Who I <span className="gradient-text">Am</span>
           </motion.h2>
         </div>
 
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="liquid-glass gradient-border rounded-2xl p-8 md:p-10"
+            className="liquid-glass gradient-border rounded-2xl p-8 md:p-10 text-center"
           >
-            <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-              <p>
-                I am currently pursuing my <span className="font-semibold text-foreground">B.Tech in Computer Science</span> from Jagannath University, Jaipur (Expected 2027). 
-              </p>
-              <p>
-                I specialize in <span className="font-semibold text-foreground">backend technologies</span> with a strong proficiency in Python and Django REST Framework, alongside modern frontend tools like React.js and Tailwind CSS.
-              </p>
-              <p>
-                My key strengths are problem-solving, teamwork, and I am a quick learner who adapts easily to new technologies. I recently worked as a <span className="font-semibold text-foreground">Full Stack Web Development Intern</span> at Yhills, where I developed core web applications.
-              </p>
-            </div>
+            <p className="text-lg md:text-xl leading-relaxed text-zinc-300 font-medium">
+              I am a Computer Science student at Jagannath University (2027) specializing in <span className="text-white font-bold">Full-Stack Development</span>. With strong proficiency in <span className="text-emerald-400">Python</span>, <span className="text-cyan-400">React</span>, and <span className="text-purple-400">Django REST</span>, I love transforming complex problems into scalable, elegant web solutions.
+            </p>
           </motion.div>
         </div>
       </div>
