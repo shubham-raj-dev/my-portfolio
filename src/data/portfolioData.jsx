@@ -35,22 +35,10 @@ export const socialLinks = [
 
 export const stats = [
   { label: "Projects Built", value: "3+" },
-  { label: "Internships", value: "5" },
+  { label: "Internships", value: "6" },
 ];
 
 export const experiences = [
-  {
-    company: "Edunet Foundation & IBM",
-    role: "Artificial Intelligence Intern (6-Week)",
-    period: "May 2026 – Jun 2026",
-    location: "Remote (AICTE Approved)",
-    color: "from-violet-500 to-fuchsia-500",
-    logo: "E",
-    highlights: [
-      "Completed a rigorous 6-week track focusing deeply on Artificial Intelligence via the IBM SkillsBuild platform.",
-      "Developed a standalone AI project under mentor guidance, mastering foundational and advanced AI concepts.",
-    ],
-  },
   {
     company: "Edunet Foundation & IBM",
     role: "AI & Cloud Technologies Intern (4-Week)",
@@ -114,6 +102,18 @@ export const experiences = [
     highlights: [
       "Mastered the MERN stack through a comprehensive 4-month program, building and delivering real-world full-stack web applications.",
       "Achieved key milestones: theoretical course completion, hands-on professional internship, and independent project execution.",
+    ],
+  },
+  {
+    company: "Edunet Foundation & IBM",
+    role: "Artificial Intelligence Intern (6-Week)",
+    period: "May 2026 – Jun 2026",
+    location: "Remote (AICTE Approved)",
+    color: "from-violet-500 to-fuchsia-500",
+    logo: "E",
+    highlights: [
+      "Completed a rigorous 6-week track focusing deeply on Artificial Intelligence via the IBM SkillsBuild platform.",
+      "Developed a standalone AI project under mentor guidance, mastering foundational and advanced AI concepts.",
     ],
   }
 ];
