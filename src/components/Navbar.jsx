@@ -25,6 +25,7 @@ function Navbar() {
         }
       }, 100);
     } else {
+      window.history.replaceState(null, '', '/');
       const element = document.getElementById(sectionId);
       if (element) {
         window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
@@ -73,7 +74,16 @@ function Navbar() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 md:px-12">
-        <a href="#" className="text-xl font-bold tracking-tighter text-foreground">
+        <a 
+          href="/" 
+          onClick={(e) => {
+            e.preventDefault();
+            if (location.pathname !== '/') navigate('/');
+            else window.history.replaceState(null, '', '/');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }} 
+          className="text-xl font-bold tracking-tighter text-foreground"
+        >
           Shubham<span className="gradient-text"> Raj</span>
         </a>
 
