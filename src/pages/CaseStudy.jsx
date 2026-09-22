@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowUpRight, Github, AlertTriangle, CheckCircle2, Terminal } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, AlertTriangle, CheckCircle2, Terminal } from 'lucide-react';
 import { projects, GithubIcon } from '../data/portfolioData';
 
 function CaseStudy() {
