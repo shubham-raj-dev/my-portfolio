@@ -20,12 +20,12 @@ export const LinkedinIcon = (props) => (
 export const RESUME_LINK = "/Shubham_Resume.pdf";
 
 export const navLinks = [
-  { name: "About", href: "/#about" },
-  { name: "Experience", href: "/#experience" },
-  { name: "Projects", href: "/#projects" },
-  { name: "Skills", href: "/#skills" },
-  { name: "FAQ", href: "/#faq" },
-  { name: "Contact", href: "/#contact" },
+  { name: "About", href: "/about" },
+  { name: "Experience", href: "/experience" },
+  { name: "Projects", href: "/projects" },
+  { name: "Skills", href: "/skills" },
+  { name: "FAQ", href: "/faq" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const socialLinks = [

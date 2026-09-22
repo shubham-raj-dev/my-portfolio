@@ -8,23 +8,18 @@ function Footer() {
 
   const handleNavClick = (e, href) => {
     e.preventDefault();
-    const sectionId = href.split('#')[1];
+    const sectionId = href.substring(1); // removes the '/'
     
-    if (location.pathname !== '/') {
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
-        }
-      }, 100);
-    } else {
-      window.history.replaceState(null, '', '/');
+    if (location.pathname !== href) {
+      navigate(href);
+    }
+    
+    setTimeout(() => {
       const element = document.getElementById(sectionId);
       if (element) {
         window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
       }
-    }
+    }, 100);
   };
 
   return (
