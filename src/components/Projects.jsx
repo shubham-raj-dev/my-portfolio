@@ -76,8 +76,7 @@ function Projects() {
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 py-2 text-sm font-medium rounded-lg bg-white/5 text-zinc-300 hover:bg-white/10 transition-colors">
                     <GithubIcon className="h-4 w-4"/> Code
                   </a>
-                  
-                  <Link to={`/case-study/${project.id}`} className="flex items-center justify-center gap-2 py-2 text-sm font-medium rounded-lg border border-white/10 bg-transparent text-white hover:bg-white/5 transition-all">
+                  <Link to={`/${project.id}`} className="flex items-center justify-center gap-2 py-2 text-sm font-medium rounded-lg border border-white/10 bg-transparent text-white hover:bg-white/5 transition-all">
                     <FileSearch className="h-4 w-4"/> Case Study
                   </Link>
 
