@@ -46,7 +46,6 @@ export const experiences = [
     location: "Remote (AICTE Approved)",
     color: "from-violet-500 to-fuchsia-500",
     logo: "E",
-    certificateLink: "https://drive.google.com/file/d/1UzKcFc8ebLMmbNqvPIlf0YjX8kX-SiUJ/view?usp=sharing",
     highlights: [
       "Completed a rigorous 6-week track focusing deeply on Artificial Intelligence via the IBM SkillsBuild platform.",
       "Developed a standalone AI project under mentor guidance, mastering foundational and advanced AI concepts.",
@@ -92,13 +91,26 @@ export const experiences = [
     ],
   },
   {
+    company: "Cisco Networking Academy",
+    role: "AICTE Virtual Internship Program in Cybersecurity",
+    period: "Jun 2025 – Aug 2025",
+    location: "Remote (AICTE Approved)",
+    color: "from-blue-400 to-cyan-500",
+    logo: "C",
+    certificateLink: "https://drive.google.com/file/d/1UzKcFc8ebLMmbNqvPIlf0YjX8kX-SiUJ/view?usp=sharing",
+    highlights: [
+      "Successfully completed the Virtual Internship Program in Cybersecurity from June to August 2025.",
+      "Gained practical experience and enhanced future-ready digital skillsets through the Cisco Networking Academy.",
+    ],
+  },
+  {
     company: "YHills",
     role: "Full-Stack Web Development Intern",
     period: "Mar 2024 – Jun 2024",
     location: "Remote",
     color: "from-emerald-400 to-teal-500",
     logo: "Y",
-    certificateLink: "https://drive.google.com/file/d/1DBox7OO54My6L7zZx1d-L76R3WWwAdIu/view?usp=sharing",
+    certificateLink: "https://drive.google.com/file/d/1baEGPikf6F1GzGKTsXMcTU_cLikGQyc_/view?usp=sharing",
     highlights: [
       "Mastered the MERN stack through a comprehensive 4-month program, building and delivering real-world full-stack web applications.",
       "Achieved key milestones: theoretical course completion, hands-on professional internship, and independent project execution.",
