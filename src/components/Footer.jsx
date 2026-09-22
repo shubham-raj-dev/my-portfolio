@@ -1,7 +1,31 @@
 import React from 'react';
-import { socialLinks } from '../data/portfolioData';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { socialLinks, navLinks } from '../data/portfolioData';
 
 function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const sectionId = href.split('#')[1];
+    
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <footer className="relative z-10 border-t border-white/5 liquid-glass py-12 text-center text-zinc-400">
       <div className="container mx-auto px-4 flex flex-col items-center gap-6">
@@ -9,6 +33,20 @@ function Footer() {
         <p className="text-sm max-w-md mx-auto">
           Building scalable, elegant web experiences. Thank you for visiting my portfolio.
         </p>
+
+        {/* Footer Navigation Links */}
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-2">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="text-sm font-medium text-zinc-400 hover:text-white transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
         
         <div className="flex gap-4 mb-4">
           {socialLinks.map((link) => {

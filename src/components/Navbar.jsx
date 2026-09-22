@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, Download } from 'lucide-react';
 import { navLinks, RESUME_LINK } from '../data/portfolioData';
 
@@ -8,6 +9,30 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const sectionId = href.split('#')[1];
+    
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
+      }
+    }
+    setActiveSection(sectionId);
+    setIsMobileMenuOpen(false);
+  };
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 20);
@@ -63,7 +88,7 @@ function Navbar() {
                 <a 
                   key={link.name} 
                   href={link.href}
-                  onClick={() => setActiveSection(sectionId)}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 ${
                     isActive ? 'text-white' : 'text-muted-foreground hover:text-white'
                   }`}
@@ -113,10 +138,7 @@ function Navbar() {
                 <a 
                   key={link.name} 
                   href={link.href} 
-                  onClick={() => {
-                    setActiveSection(sectionId);
-                    setIsMobileMenuOpen(false);
-                  }}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className={`text-2xl font-semibold tracking-tight transition-colors py-2 border-b border-white/[0.03] ${
                     isActive ? 'text-[#14d9a0] font-bold' : 'text-zinc-400 hover:text-white'
                   }`}
