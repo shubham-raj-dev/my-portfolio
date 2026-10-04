@@ -126,6 +126,7 @@ function Navbar() {
         <button 
           className="md:hidden text-foreground relative z-50"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
         >
           {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>

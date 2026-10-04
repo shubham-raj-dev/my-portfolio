@@ -14,17 +14,51 @@
     <!-- Bing Webmaster Tools → Add site → HTML meta tag method -->
     <meta name="msvalidate.01" content="REPLACE_WITH_BING_WEBMASTER_CODE" />
 
-    <!-- ⚠️ ACTION REQUIRED: replace REPLACE-WITH-YOUR-DOMAIN with your Vercel domain (no https:// ... keep https://) -->
-    <link rel="canonical" href="https://REPLACE-WITH-YOUR-DOMAIN/" />
+    <!-- Canonical and OpenGraph -->
+    <link rel="canonical" href="https://shubham-raj-portfolio.vercel.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Shubham Raj - Full Stack Developer" />
     <meta property="og:description" content="Portfolio of Shubham Raj, Full Stack Developer specializing in Python, Django, and React." />
-    <meta property="og:url" content="https://REPLACE-WITH-YOUR-DOMAIN/" />
-    <meta property="og:image" content="https://REPLACE-WITH-YOUR-DOMAIN/profile.png" />
+    <meta property="og:url" content="https://shubham-raj-portfolio.vercel.app/" />
+    <meta property="og:image" content="https://shubham-raj-portfolio.vercel.app/profile.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Shubham Raj - Full Stack Developer" />
     <meta name="twitter:description" content="Portfolio of Shubham Raj, Full Stack Developer specializing in Python, Django, and React." />
-    <meta name="twitter:image" content="https://REPLACE-WITH-YOUR-DOMAIN/profile.png" />
+    <meta name="twitter:image" content="https://shubham-raj-portfolio.vercel.app/profile.png" />
+
+    <!-- Schema.org JSON-LD for AEO/GEO and E-E-A-T -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://shubham-raj-portfolio.vercel.app/#person",
+          "name": "Shubham Raj",
+          "jobTitle": "Full Stack Developer",
+          "url": "https://shubham-raj-portfolio.vercel.app/",
+          "image": "https://shubham-raj-portfolio.vercel.app/profile.png",
+          "sameAs": [
+            "https://github.com/shubham-raj-dev"
+          ],
+          "knowsAbout": ["Python", "JavaScript", "React.js", "Django REST Framework", "Web Development"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://shubham-raj-portfolio.vercel.app/#website",
+          "url": "https://shubham-raj-portfolio.vercel.app/",
+          "name": "Shubham Raj - Full Stack Developer",
+          "description": "Portfolio of Shubham Raj, Full Stack Developer specializing in Python, Django, and React.",
+          "publisher": {
+            "@id": "https://shubham-raj-portfolio.vercel.app/#person"
+          },
+          "author": {
+            "@id": "https://shubham-raj-portfolio.vercel.app/#person"
+          }
+        }
+      ]
+    }
+    </script>
 
     <title>Shubham Raj - Full Stack Developer</title>
   </head>

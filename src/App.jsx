@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import CaseStudy from './pages/CaseStudy';
 import './index.css';
@@ -36,7 +37,8 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <HelmetProvider>
+      <Router>
       <div className="bg-background min-h-screen text-foreground font-sans selection:bg-[#14d9a0]/30 relative overflow-hidden">
         
         {/* 🌊 THE REAL APPLE iOS LIQUID TRICK 🌊 */}
@@ -67,6 +69,7 @@ function App() {
         
       </div>
     </Router>
+    </HelmetProvider>
   );
 }
 

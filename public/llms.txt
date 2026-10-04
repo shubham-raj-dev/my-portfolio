@@ -1,0 +1,18 @@
+# Shubham Raj - Full Stack Developer
+
+Shubham Raj is a Full Stack Developer specializing in Python, Django, and React.js. He builds scalable, elegant web experiences.
+
+## Technical Skills
+- **Languages:** Python, JavaScript, HTML/CSS, SQL
+- **Frontend:** React.js, Tailwind CSS, Bootstrap
+- **Backend & Database:** Django REST Framework, Node.js, PostgreSQL, MongoDB
+- **Tools & Others:** Git/GitHub, Vercel, Postman, WebSockets
+
+## Projects
+- **UrbanShift:** A comprehensive relocation and property platform integrating property buying/renting with Packers & Movers booking services. Built with React.js, Django REST, PostgreSQL, and WebSockets.
+- **Techvolution:** A high-conversion landing page for a tech conference, built with HTML, CSS, and Vanilla JavaScript.
+- **Registration Portal:** A dynamic student registration form with robust client-side validation logic using regex.
+
+## Contact & Links
+- Website: https://shubham-raj-portfolio.vercel.app
+- GitHub: https://github.com/shubham-raj-dev

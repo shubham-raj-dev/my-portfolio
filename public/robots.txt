@@ -2,5 +2,4 @@
 User-agent: *
 Allow: /
 
-# ⚠️ ACTION REQUIRED: replace with your deployed domain
-Sitemap: https://REPLACE-WITH-YOUR-DOMAIN/sitemap.xml
+Sitemap: https://shubham-raj-portfolio.vercel.app/sitemap.xml

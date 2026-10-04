@@ -52,6 +52,7 @@ function Footer() {
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-full border border-white/5 bg-white/[0.02] hover:bg-white/[0.08] hover:-translate-y-1 transition-all"
                 title={link.name}
+                aria-label={`Visit my ${link.name}`}
               >
                 <Icon className="h-4 w-4 text-zinc-300" />
               </a>

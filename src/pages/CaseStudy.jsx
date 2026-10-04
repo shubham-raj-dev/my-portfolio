@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowUpRight, AlertTriangle, CheckCircle2, Terminal } from 'lucide-react';
 import { projects, GithubIcon } from '../data/portfolioData';
@@ -25,6 +26,14 @@ function CaseStudy() {
 
   return (
     <div className="min-h-screen relative z-10 pt-24 pb-20">
+      <Helmet>
+        <title>{project.title} - Shubham Raj</title>
+        <meta name="description" content={project.description} />
+        <meta property="og:title" content={`${project.title} - Shubham Raj`} />
+        <meta property="og:description" content={project.description} />
+        <meta property="og:image" content={`https://shubham-raj-portfolio.vercel.app${project.image}`} />
+        <meta property="og:url" content={`https://shubham-raj-portfolio.vercel.app/${project.id}`} />
+      </Helmet>
       <div className="container mx-auto px-4 md:px-8 max-w-4xl">
         <Link to="/" className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8 bg-white/5 px-4 py-2 rounded-full border border-white/10">
           <ArrowLeft className="h-4 w-4" /> Back to Portfolio
