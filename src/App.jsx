@@ -1,44 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import CaseStudy from './pages/CaseStudy';
+import Home from './pages/Home';
+import CaseStudy from './pages/CaseStudy';
+import WebVitals from './components/WebVitals';
 import './index.css';
 
 function App() {
-  useEffect(() => {
-    if (!sessionStorage.getItem('visit_tracked')) {
-      const trackVisit = async () => {
-        const referrer = document.referrer.toLowerCase();
-        const url = window.location.href;
-
-        let platform = "Direct / Unknown";
-        if (referrer.includes('linkedin.com')) platform = "LinkedIn";
-        else if (referrer.includes('github.com')) platform = "GitHub";
-        else if (referrer.includes('t.co') || referrer.includes('twitter')) platform = "X (Twitter)";
-        else if (referrer.includes('instagram.com')) platform = "Instagram";
-        else if (referrer.includes('google')) platform = "Google Search";
-        else if (referrer) platform = "Other Website";
-
-        try {
-          await fetch('/api/track', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ referrer, url, platform })
-          });
-          sessionStorage.setItem('visit_tracked', 'true');
-        } catch (error) {
-          console.error("Tracking error");
-        }
-      };
-
-      trackVisit();
-    }
-  }, []);
-
   return (
     <HelmetProvider>
       <Router>
+        <WebVitals />
       <div className="bg-background min-h-screen text-foreground font-sans selection:bg-[#14d9a0]/30 relative overflow-hidden">
         
         {/* 🌊 THE REAL APPLE iOS LIQUID TRICK 🌊 */}
