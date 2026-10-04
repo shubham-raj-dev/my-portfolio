@@ -5,16 +5,15 @@
   },
   "entries": [
     {
-      "identifier": "urn:portfolio:llms",
+      "identifier": "urn:air:shubhamraj:portfolio:llms",
       "displayName": "Portfolio Details for LLMs",
-      "type": "text/markdown",
-      "url": "https://shubham-raj-portfolio.vercel.app/llms.txt"
-    },
-    {
-      "identifier": "urn:portfolio:website",
-      "displayName": "Shubham Raj Website",
-      "type": "text/html",
-      "url": "https://shubham-raj-portfolio.vercel.app/"
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://shubham-raj-portfolio.vercel.app/llms.txt",
+      "representativeQueries": [
+        "shubham raj portfolio",
+        "hire full stack developer shubham raj",
+        "shubham raj python react projects"
+      ]
     }
   ]
 }
