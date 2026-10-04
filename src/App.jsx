@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import CaseStudy from './pages/CaseStudy';
-import Home from './pages/Home';
-import CaseStudy from './pages/CaseStudy';
 import WebVitals from './components/WebVitals';
 import './index.css';
 
