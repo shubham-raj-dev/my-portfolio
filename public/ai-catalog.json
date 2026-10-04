@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "name": "Shubham Raj Portfolio",
+  "description": "Portfolio of Shubham Raj, Full Stack Developer specializing in Python, Django, and React.",
+  "resources": [
+    {
+      "type": "website",
+      "url": "https://shubham-raj-portfolio.vercel.app",
+      "description": "Main portfolio website"
+    },
+    {
+      "type": "documentation",
+      "url": "https://shubham-raj-portfolio.vercel.app/llms.txt",
+      "description": "LLM-friendly text representation of the portfolio"
+    }
+  ]
+}
