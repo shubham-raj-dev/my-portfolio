@@ -1,4 +1,4 @@
-import UAParser from 'ua-parser-js';
+import { UAParser } from 'ua-parser-js';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
